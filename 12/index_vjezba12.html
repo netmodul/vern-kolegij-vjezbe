@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="hr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="robots" content="noindex"> <!-- ne želim da tražilice indeksiraju ovu stranicu! -->
+    
+    <meta name="description" content="Ovo je stranica sa primjerima lista">
+    <meta name="keywords" content="liste, popisi">
+    <meta name="author" content="Mario Gabud">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Vježba 12 - Forma</title>
+</head>
+<!-- u ovoj vježbi je minimalno korišten inline css obziorm da do sada nismo radili CSS-->
+<body>
+    <h1>Primjer Forme za vježbu 12</h1>
+    <div style="width:200px" >  
+    <form action="index_vjezba12.html" method="post">
+        <div>
+            <label for="ime">Vaše ime *</label>
+            <input type="text" id="ime" name="tvojeime" placeholder="Ovdje upišite vaše ime.." required>
+        </div>
+        <br>
+        <div>
+            <label for="prezime">Vaše prezime *</label>
+            <input type="text" id="prezime" name="tvojeprezime" placeholder="Ovdje upišite vaše prezime.." required>
+        </div>
+        <br>
+        <div>	
+            <label for="email">E-mail adresa *</label>
+            <input type="email" id="email" name="email" placeholder="Upišite svoju mail adresu.." required>
+        </div>
+        <br>
+        <div>
+            <label for="drzave">Država</label>
+            <select id="drzave" name="country" >
+              <option value="">Odaberi sa popisa</option>
+              <option value="BE">Belgija</option>
+              <option value="HR" selected>Hrvatska</option>
+              <option value="LU">Luksemburg</option>
+              <option value="HU">Mađarska</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="message">Poruka</label>
+            <textarea id="message" name="message" placeholder="Upištite svoju poruku..." ></textarea>
+        </div>
+        <br>
+        <div>
+            <input type="submit"  value="Pošalji"> 
+            <input type="reset" value="Poništi">
+        </div>
+    </form>
+    </div>
+
+
+
+</body></html>
