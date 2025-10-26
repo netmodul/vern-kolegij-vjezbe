@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style>
+
+        /* New CSS (applies now) */
+        html { box-sizing: border-box; }
+        *, *::before, *::after { box-sizing: inherit; }
+        body { font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 16px; }
+
+        /* Header */
+        header {
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover; /* prekrivanje cijelog headera, proporcionalno */
+            background-image: url("images/51792-HEADER-1-M.webp");
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 100%;
+            height: min(90vh, calc(100vw * 9 / 16)); /* izračun za proporcionalna visina uz max 90vh */
+        }
+
+        header h1 { color:#e7e7e7; } /*boja naslovnog teksta u headeru*/
+
+        /* >=600px (tableti i naviše) */
+        @media only screen and (min-width: 600px) {
+            header {
+                background-image: url("images/51792-HEADER-1-T.webp");
+                background-position: center;
+            }
+        }
+        /* >=1024px (laptopi) */
+        @media only screen and (min-width: 1024px) {
+            header {
+                background-image: url("images/51792-HEADER-1-T.webp");
+            }
+        }
+        /* >=1280px (veći desktop) */
+        @media only screen and (min-width: 1280px) {
+            header {
+                background-image: url("images/51792-HEADER-1-D.webp");
+            }
+        }
+
+        /* Definiranje fontova i veličina teksta postavke definirane za globalno korištenje*/
+        h1 { 
+            font-size: 22px; 
+            margin: 10px 0; 
+        }
+
+        h2 { 
+            font-size: 18px; 
+            margin: 10px 0; 
+        }
+
+        p  { 
+            font-size: 0.9rem; 
+            line-height: 1.6; 
+        }
+
+        span { 
+            color: #407a21; 
+            font-weight: bold; 
+        }
+
+        /* parametri za 'main' dio */
+        main { 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 20px 10px; 
+        }
+
+        /* Navigacija */
+        nav ul { list-style: none; padding: 0; margin: 0; }
+        @media (min-width: 480px) {
+            nav ul { display: flex; }
+            nav li { flex: 1 1 auto; }
+            h1 { font-size: 28px; }
+        }
+
+        nav a { 
+            color: white; 
+            background: black; 
+            font-weight: bold; 
+            display: block; 
+            padding: 15px; 
+            font-size: 15px; 
+            text-decoration: none; 
+            text-align: center; 
+        }
+
+        nav a:hover { 
+            background: darkgray; 
+        }
+
+        nav a:focus-visible { 
+            outline: 2px solid #fff; 
+            outline-offset: 2px; 
+        }
+
+        @media only screen and (min-width: 768px) { 
+            nav a { 
+                font-size: 20px; 
+            } 
+        }
+
+        /* Flex prikaz div elemenata proizvoda: 1 (mob), 2 (tablet), 3 (veliki PC); zadnji red centriran */
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        /* Osnovno: mobiteli 1 u redu */
+        section > div {
+            flex: 0 1 100%;
+            max-width: 100%;
+            margin: 0;
+            padding: 10px 5px;
+            border: 1px solid darkgray;
+            box-shadow: 0 2px 3px 1px #ddd;
+            background: #fff;
+        }
+
+        /* Tableti i manja prijenosna - laptopi: 2 u redu */
+        @media (min-width: 600px) {
+            section > div {
+                flex-basis: calc((100% - 20px) / 2);
+                max-width: calc((100% - 20px) / 2);
+            }
+        }
+
+        /* Veliki PC: 3 u redu (>=1280px) */
+        @media (min-width: 1280px) {
+            section > div {
+                flex-basis: calc((100% - 40px) / 3);
+                max-width: calc((100% - 40px) / 3);
+            }
+        }
+
+        div img { 
+            width: 100%; 
+            display: block; 
+        }
+
+        .price { 
+            margin: 30px 0 10px 0; 
+        }
+
+        /* Footer */
+        footer {
+            background-color: black;
+            padding: 10px 0;
+            margin-top: 10px;
+            text-align: center;
+            color: white;
+        }
+        </style>
+    </head>
+   <body>
+        <header> <h1>MARQ &reg; TOOL WATCH COLLECTION</h1></header>
+        <nav> <ul>
+                    <li><a href="">Homepage</a></li>
+                    <li><a href="">Articles</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+        </nav>
+    
+        <main> 
+            <h2>LUXURY SMARTWATCHES</h2>
+                <section>
+                    <div>
+                        <figure id="adventurer">
+                            <img src="images/adventurer.webp" alt="MARQ® Adventurer" title="MARQ® Adventurer">
+                        </figure>
+                        <h2>MARQ® Adventurer</h2>
+                        <p>Potrebna vam je pouzdana pomoć za avanture. Za vaše vam je ekspedicije potreban luksuzan i moderan funkcionalni sat napravljen od titanija 5. klase s AMOLED zaslonom, TOPO kartama i još mnogo toga.</p>
+                        <p class="price"><span>Cijena:</span> 2.250,00 €</p>
+                    </div>
+                    <div>
+                        <figure id="athlete">
+                            <img src="images/athlete.webp" alt="MARQ® Athlete" title="MARQ® Athlete">
+                        </figure>
+                        <h2>MARQ® Athlete</h2>
+                        <p>Uvijek pomičete svoje granice. Zaslužujete luksuzan i moderan funkcionalni sat napravljen od titanija 5. klase s AMOLED zaslonom i revolucionarnim funkcijama za treniranje i oporavak.</p>
+                        <p class="price"><span>Cijena:</span> 1.950,00 €</p>
+                    </div>
+                    <div>
+                        <figure id="aviator">
+                            <img src="images/aviator.webp" alt="MARQ® Aviator" title="MARQ® Aviator">
+                        </figure>
+                        <h2>MARQ® Aviator</h2>
+                        <p>Želite biti spremni poletjeti u trenutku. Potreban vam je luksuzan i moderan funkcionalni sat napravljen od titanija 5. klase s AMOLED zaslonom i namjenskim funkcijama za letenje.</p>
+                        <p class="price"><span>Cijena:</span> 2.550,00 €</p>
+                    </div>
+                </section>    
+        </main>
+        <footer> &copy; Mario Gabud </footer>
+    </body>
+</html>

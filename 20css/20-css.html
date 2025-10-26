@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="hr">
+	<head>
+		<title>CSS: Vježba 20</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="CSS vježba 20">
+        <meta name="keywords" content="HTML, CSS">
+        <meta name="author" content="Mario Gabud">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
+ 
+		<style>
+            h1 {
+                text-align: center;
+                text-transform: uppercase; /* Sva slova u naslovu moraju biti velika (UPPERCASE)*/
+                letter-spacing: 3px; /*Razmak između slova u naslovu mora biti 3px.*/
+                text-decoration: underline;
+            }
+            h1:hover {
+                text-shadow: 2px 1px rgba(255, 255, 255, 0.63); /*Kada pređete mišem preko naslova, naslov dobiva sjenu.*/
+
+            }
+
+
+            p.prvi {
+                text-align: left;
+                font-size: x-large;
+                letter-spacing: 2px; /*Razmak između slova mora biti 2px */
+                word-spacing: 7px; /*Razmak između riječi mora biti 7px */
+                text-transform: capitalize; /*Tekst u prvom paragrafu mora imati text-transform: capitalize (prva slova riječi velika).*/
+                background-color: #0000FF;
+                padding: 15px;
+                
+            }
+
+            p.drugi {
+                text-align: left;
+                font-size: x-large;
+                line-height: 20px; /*Razmak između linija mora biti 20px.*/
+                text-transform: lowercase; /*Tekst u drugom paragrafu mora imati text-transform: lowercase (sva slova mala).*/
+                background-color: rgb(0, 255, 0);
+                padding: 15px;
+            }
+
+            p.treci {
+                text-align: left;
+                font-size: x-large;
+                background-color:rgba(255, 0, 0, 0.5);
+                padding: 15px;
+                
+            }
+
+            p.prvi, p.drugi, p.treci {
+                text-indent: 50px; /*Prvi redak svakog paragrafa mora biti uvučen za 50px.*/
+            }
+
+            p.prvi:hover, p.drugi:hover, p.treci:hover {
+                color : white; /*Boja teksta u sva tri paragrafa mora biti bijela.*/
+            }
+
+            body {
+                background: url("background.jpg") no-repeat center center;
+                background-size: cover;
+                background-attachment: fixed;
+            }   
+
+            .card {
+                background: white;
+                color: #333;
+                padding: 40px 20px;
+                border-radius: 10px;
+                text-align: center;
+                width: 80%;
+                max-width: 600px;
+                margin: 20px auto;
+                box-shadow: 5px 5px 8px rgba(251, 255, 0, 0.4);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .card:hover {
+                transform: scale(1.05);
+                box-shadow: 10px 10px 15px rgba(251, 255, 0, 0.7);
+}
+            </style>
+	</head>
+
+    <body>
+
+        <h1>Tri odlomka teksta</h1>
+
+        <p class="prvi">Prvi odlomak <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla blandit finibus urna nec rhoncus. 
+            Vivamus sollicitudin ultrices auctor. Donec elementum ornare leo, nec cursus est rutrum non. Vivamus eu magna vel enim elementum 
+            vestibulum.
+        </p>
+        
+        <p class="drugi">Drugi odlomak<br>In hac habitasse platea dictumst. Nunc sagittis eleifend enim fermentum viverra. 
+            Cras facilisis aliquam sem et lacinia. Aenean neque dolor, condimentum quis dui quis, elementum pulvinar augue. 
+           
+        </p>
+        
+        <p class="treci">Treći odlomak - slika je dodana u pozadinu kako bi se vidjelo manifestiranje 50% transparencije.<br><br>Cras tincidunt dolor ullamcorper 
+            pulvinar euismod. Cras libero nunc, tempus sed rhoncus vitae, dictum vitae nunc. Nam ut nisi aliquam, imperdiet dui mattis, rhoncus felis. 
+        </p>
+
+        <div class="card">
+            <h2>Unutar stranice kreirajte karticu koja sadrži naslov, sliku i paragraf - ovo je naslov</h2>
+            <img src="background.jpg" alt="Slika za wallpaer" style="width:60%; border-radius: 10px;">
+            <p>Ovo je praragraf: Kartica mora imati bijelu pozadinu, zaobljene rubove i efekt sjene.<br>
+            Kada pređete mišem preko kartice, ona se treba blago povećati i dobiti jaču sjenu.</p>
+        </div>
+    </body>
+</html>
