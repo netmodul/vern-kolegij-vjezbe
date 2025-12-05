@@ -1,0 +1,196 @@
+/* Stilovi za formu na kontakt stranici */
+
+.lego-contact {
+    margin: 24px auto;
+    padding: 24px;
+    max-width: 960px;
+    background-color: #f0f7ff;
+    border: 1px solid #c8e1ff;
+    border-radius: 8px;
+}
+
+.lego-form .form-row {
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.lego-form label {
+    font-weight: 600;
+    color: #1f3f78;
+}
+
+/* Osnovni izgled polja u formi */
+.lego-form input:not([type="checkbox"]):not([type="radio"]),
+.lego-form select,
+.lego-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.6rem 0.75rem;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font: inherit;
+}
+/* Novi selektor: istice email polje */
+.lego-form input[type="email"] {
+    border-color: #b5c8ff;
+}
+/* Novi selektori: oznaka za required polja */
+.lego-form input[required],
+.lego-form select[required],
+.lego-form textarea[required] {
+    border-left: 3px solid #1f3f78;
+    padding-left: 0.65rem;
+}
+
+/* Fokusirano polje (:focus) */
+.lego-form input[type="text"]:focus,
+.lego-form input[type="email"]:focus,
+.lego-form input[type="number"]:focus,
+.lego-form input[type="tel"]:focus,
+.lego-form select:focus,
+.lego-form textarea:focus {
+    border-color: #1f3f78;
+    background-color: #e9f2ff;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+/* Označeni checkbox / radio (:checked na labelu) */
+.lego-form input[type="checkbox"]:checked + label,
+.lego-form input[type="radio"]:checked + label {
+    font-weight: 700;
+    color: #1a7f1a;
+}
+
+/* Onemogućeno polje (:disabled) */
+.lego-form input:disabled,
+.lego-form select:disabled,
+.lego-form textarea:disabled {
+    background-color: #eeeeee;
+    color: #666666;
+    cursor: not-allowed;
+}
+.lego-form #promo-code:disabled {
+    background-color: #eeeeee;
+    color: #666666;
+    cursor: not-allowed;
+}
+
+/* Omogućena polja (:enabled) */
+.lego-form input:enabled,
+.lego-form select:enabled,
+.lego-form textarea:enabled {
+    background-color: #ffffff;
+}
+
+/* Gumb za slanje */
+.lego-form .btn-send {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    padding: 0.6rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #28a745;
+    color: #ffffff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Gumb za slanje sa hover efektom :hover (bonus) */
+.lego-form .btn-send:hover {
+    background-color: #218838;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.16);
+    transform: translateY(-2px);
+}
+
+/* Novi CSS: osnovni izgled linkova u meniju */
+.main-nav a {
+    display: inline-block;
+    padding: 0.5rem 0.75rem;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #1f3f78;
+    border-radius: 4px;
+}
+
+/* Pseudoklase za linkove u navigaciji */
+.main-nav a:hover {
+    background-color: #3054a0;
+    color: #e8f1ff;
+}
+
+.main-nav a:focus {
+    outline: 2px solid #99b7ff;
+    outline-offset: 2px;
+    background-color: #3054a0;
+    color: #e8f1ff;
+}
+
+.main-nav a:active {
+    background-color: #17325c;
+    transform: translateY(1px);
+}
+
+.main-nav a:visited {
+    background-color: #2a467d;
+}
+
+/* Selektori atributa za linkove u navigaciji */
+nav.main-nav a[href*="galerija"] {
+    background-color: #0f4f91;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+nav.main-nav a[target="_blank"] {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+nav.main-nav a[target="_blank"]::after {
+    content: " ↗";
+}
+
+/* Galerija: raspored slika jedna do druge */
+.lego-gallery {
+    max-width: 900px;
+    margin: 2rem auto;
+}
+
+.gallery-row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.gallery-row img {
+    width: calc((100% - 2rem) / 3);
+    flex: 0 0 calc((100% - 2rem) / 3);
+}
+
+/* Selektori atributa na slikama */
+.lego-gallery img[data-set="city"] {
+    border: 4px solid blue;
+}
+
+.lego-gallery img[data-set="technic"] {
+    border: 4px solid orange;
+}
+
+.lego-gallery img[data-set="friends"] {
+    border: 4px solid deeppink;
+}
+
+.lego-gallery img[src$=".jpg"] {
+    border-radius: 8px;
+}
+
+/* Pseudoklase na slikama u galeriji */
+.lego-gallery img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
