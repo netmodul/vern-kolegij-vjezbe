@@ -7,26 +7,229 @@
     <meta name="author" content="Mario Gabud">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>CSS: Vježba 13</title>
+        <title>CSS: Vježba 13</title>
 
-    <style>
-        p { color: green;
-            font-style: oblique ;
+ <style>
+        /* OVDJE JE DODAN CSS KOD */
 
+        /* 1. Reset osnovnih margina i paddinga za sve elemente */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        #red {
-            color:red;
+
+        /* 2. Osnovni stil za cijelu stranicu */
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #222;
+        }
+
+        /* 3. Header dio stranice */
+        header {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            margin: 24px auto 0;
+            padding: 24px;
+            max-width: 960px;
+        }
+
+        /* 4. Banner slika unutar headera */
+        .banner img {
+            width: 100%;
+            display: block;
+        }
+
+        /* 5. Navigacija ispod bannera */
+        nav {
+            background-color: #1f3f78;
+            padding: 12px 24px;
+            margin-top: 16px;
+        }
+
+        /* 6. Lista u navigaciji */
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        /* 7. Stavke liste u navigaciji */
+        li {
+            margin-right: 20px;
+        }
+
+        /* 8. Linkovi u navigaciji */
+        a {
+            text-decoration: none;
+            color: #ffffff;
+            border-bottom: 2px solid transparent;
+            padding-bottom: 4px;
+            font-size: 0.95rem;
+        }
+
+        a:hover {
+            border-color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* 9. Glavni sadržaj (main) */
+        main {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            margin: 24px auto;
+            padding: 24px;
+            max-width: 960px;
+        }
+
+        /* 10. Tekst u glavnom sadržaju */
+        main p {
+            line-height: 1.5;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        /* DODATNI STILOVI */
+        main h1 {
+            text-align: center;
+            color: blue;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+
+        main h2 {
+            margin-top: 15px;
+            margin-bottom: 8px;
+            color: #333333;
+            font-size: 20px;
+        }
+
+        .uvod {
+            font-style: italic;
             font-weight: bold;
-            font-style: normal;
+            margin-bottom: 15px;
+        }
+
+        #osnovan {
+            background-color: #ffffff;
+            border: 1px solid #cccccc;
+            padding: 8px;
+            margin-bottom: 12px;
+        }
+
+        .vazno {
+            color: green;
+            font-weight: bold;
+        }
+
+        .lego-link {
+            display: inline-block;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            text-decoration: none;
+            border: 1px solid blue;
+            padding: 5px 10px;
+            color: blue;
+            background-color: #ffffff;
+        }
+
+        .lego-slika {
+            width: 300px;
+            border: 1px solid #cccccc;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .lista-tema {
+            margin-left: 20px;
+            margin-bottom: 10px;
+            list-style-type: square;
+        }
+
+        .napomena {
+            color: red;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        /* 11. Footer */
+        footer {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #666666;
+            margin-bottom: 32px;
         }
     </style>
 </head>
-
 <body>
-    <h1>Ovo je naslov</h1>
-    <p><b>Ovo je prvi paragraf zelene boje.</b></p>
-    <p id="red">Ovo je drugi paragraf crvene boje ID = red.</p>
 
+    <header>
+        <div class="banner">
+            <img src="lego_banner.jpg" alt="Lego">
+        </div>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#">Početna</a></li>
+                <li><a href="#">O nama</a></li>
+                <li><a href="#">Usluge</a></li>
+                <li><a href="#">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<main>
+    <h1>LEGO klub Zagreb</h1>
+
+    <h2>Dobrodošli u naš LEGO svijet</h2>
+
+    <p class="uvod">
+        LEGO klub Zagreb okuplja studente koji vole slagati modele, smišljati priče
+        i učiti kroz igru. Cilj kluba je razvijati maštu i logičko razmišljanje.
+    </p>
+
+    <p id="osnovan">
+        Klub je osnovan 2024. godine i od tada redovito organiziramo radionice,
+        natjecanja i izložbe LEGO modela.
+    </p>
+
+    <p>
+        Na radionicama radimo u malim timovima. Svaki tim dobiva zadatak, a
+        zatim zajedno planiraju, slažu modele i predstavljaju svoje rješenje.
+        Na taj način učimo suradnju i komunikaciju.
+    </p>
+
+    <p>
+        Posebno potičemo
+        <span class="vazno">kreativnost</span> i
+        <span class="vazno">rješavanje problema</span>
+        kroz zabavne LEGO izazove.
+    </p>
+
+    <a class="lego-link" href="https://www.lego.com" target="_blank">
+        Posjeti službenu LEGO stranicu
+    </a>
+    <figure> <!-- dodano u odnosu na predložak kako bi se slika prikazala u svom elementu ispod lego-link -->
+    <img class="lego-slika" src="lego_set.webp" alt="LEGO set">
+    </figure>
+    <h2>Popularne LEGO teme u našem klubu</h2>
+
+    <ul class="lista-tema">
+        <li>LEGO City</li>
+        <li>LEGO Technic</li>
+        <li>LEGO Star Wars</li>
+        <li>LEGO Friends</li>
+    </ul>
+
+    <p class="napomena">
+        Napomena: informacije o rasporedu radionica i prijavi nalaze se na oglasnoj ploči škole.
+    </p>
+</main>
+
+    <footer>
+        &copy; Mario Gabud
+    </footer>
 </body>
-
 </html>
