@@ -18,14 +18,58 @@
 
         <form action="" method="">
             <label for="ime">Ime:</label><br>
-            <input type="text" id="ime" name="ime" value="" placeholder="Ovdje upiši ime..."><br>
+            <input type="text" id="ime" name="ime" value="" placeholder="Ovdje upiši ime..."><br><br>
+
             <label for="prezime">Prezime:</label><br>
-            <input type="text" id="prezime" name="prezime" value="" placeholder="Ovdje upiši ime..."><br>
+            <input type="text" id="prezime" name="prezime" value="" placeholder="Ovdje upiši prezime..."><br><br>
+
+            <label for="email">E-mail adresa:</label><br>
+            <input type="email" id="email" name="email" placeholder="ime.prezime@email.com"><br><br>
+
+            <label for="telefon">Broj telefona:</label><br>
+            <input type="tel" id="telefon" name="telefon" placeholder="+385 91 000 0000"><br><br>
+
+            <label for="godine">Unesi godine:</label><br>
+            <input type="number" id="godine" name="godine" min="0" max="120" step="1"><br><br>
+
             <label for="spol">Polja za odabir spola - Odaberi spol:</label><br>
-            <input type="radio" id="spol" name="spol" value="muski" value="muski"><label for="spol">Muški</label> &nbsp;
-            <input type="radio" id="spol" name="spol" value="zenski" value="ženski"> <label for="spol">Ženski</label><br><br>
+            <input type="radio" id="spol_m" name="spol" value="muski"><label for="spol_m">Muški</label> &nbsp;
+            <input type="radio" id="spol_z" name="spol" value="zenski"> <label for="spol_z">Ženski</label><br><br>
+
+            <label for="termin">Odaberi datum susreta:</label><br>
+            <input type="date" id="termin" name="termin"><br><br>
+
+            <label for="boja">Omiljena boja:</label><br>
+            <input type="color" id="boja" name="boja" value="#3366ff"><br><br>
+
+            <label for="interes">Razina interesa (0-10):</label><br>
+            <input type="range" id="interes" name="interes" min="0" max="10" value="5"><br><br>
+
+            <label for="grad">Odaberi grad:</label><br>
+            <select id="grad" name="grad">
+                <option value="">-- odaberi --</option>
+                <option value="zg">Zagreb</option>
+                <option value="st">Split</option>
+                <option value="du">Dubrovnik</option>
+                <option value="ri">Rijeka</option>
+            </select><br><br>
+
+            <label for="preferencije">Odaberi teme koje te zanimaju:</label><br>
+            <label><input type="checkbox" name="preferencije" value="novosti"> Novosti</label>
+            <label><input type="checkbox" name="preferencije" value="ponude"> Posebne ponude</label>
+            <label><input type="checkbox" name="preferencije" value="dogadjaji"> Događaji</label><br><br>
+
+            <label for="poruka">Poruka:</label><br>
+            <textarea id="poruka" name="poruka" rows="4" cols="40" placeholder="Napiši kratku poruku..."></textarea><br><br>
+
+            <label for="privitak">Priloži dokument:</label><br>
+            <input type="file" id="privitak" name="privitak"><br><br>
+
             <label for="lozinka">Polje za unos lozinke:</label><br>
-            <input type="password" id="lozinka" name="lozinka" value="" style="width: 30ch;" placeholder="Ostavi prazno za ulaz bez lozinke" width="30px"><br>
+            <input type="password" id="lozinka" name="lozinka" value="" style="width: 30ch;" placeholder="Ostavi prazno za ulaz bez lozinke"><br><br>
+
+            <input type="submit" value="Pošalji"> <input type="reset" value="Obriši">
+        </form>
        
         <footer>
             <div style="background-color:lightgray; padding: 1px;">
