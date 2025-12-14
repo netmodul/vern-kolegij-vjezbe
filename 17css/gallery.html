@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>CSS: Vježba 16 - galerija</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="CSS vježba 14">
+    <meta name="keywords" content="HTML, CSS">
+    <meta name="author" content="Mario Gabud">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lobster&display=swap">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+ <!-- 
+    <style>
+        /* OVDJE JE DODAN CSS KOD */
+
+        /* 1. Reset osnovnih margina i paddinga za sve elemente */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 2. Osnovni stil za cijelu stranicu */
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #222;
+        }
+
+        /* 3. Header dio stranice */
+        header {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            margin: 24px auto 0;
+            padding: 24px;
+            max-width: 960px;
+        }
+
+        /* 4. Banner slika unutar headera */
+        .banner img {
+            width: 100%;
+            display: block;
+        }
+
+        /* 5. Navigacija ispod bannera */
+        nav {
+            background-color: #1f3f78;
+            padding: 12px 24px;
+            margin-top: 16px;
+        }
+
+        /* 6. Lista u navigaciji */
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        /* 7. Stavke liste u navigaciji */
+        li {
+            margin-right: 20px;
+        }
+
+        /* 8. Linkovi u navigaciji */
+        a {
+            text-decoration: none;
+            color: #ffffff;
+            border-bottom: 2px solid transparent;
+            padding-bottom: 4px;
+            font-size: 0.95rem;
+        }
+
+        a:hover {
+            border-color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* 9. Glavni sadržaj (main) */
+        main {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            margin: 24px auto;
+            padding: 24px;
+            max-width: 960px;
+        }
+
+        /* 10. Tekst u glavnom sadržaju */
+        main p {
+            line-height: 1.5;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        /* 11. Footer */
+        footer {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #666666;
+            margin-bottom: 32px;
+        }
+
+        /* DODATNI STILOVI */
+        main h1 {
+            text-align: center;
+            color: blue;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+
+        main h2 {
+            margin-top: 15px;
+            margin-bottom: 8px;
+            color: #333333;
+            font-size: 20px;
+        }
+
+        .uvod {
+            font-style: italic;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        #osnovan {
+            background-color: #ffffff;
+            border: 1px solid #cccccc;
+            padding: 8px;
+            margin-bottom: 12px;
+        }
+
+        .vazno {
+            color: green;
+            font-weight: bold;
+        }
+
+        .lego-link {
+            display: inline-block;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            text-decoration: none;
+            border: 1px solid blue;
+            padding: 5px 10px;
+            color: blue;
+            background-color: #ffffff;
+        }
+
+        .lego-slika {
+            width: 300px;
+            border: 1px solid #cccccc;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .lista-tema {
+            margin-left: 20px;
+            margin-bottom: 10px;
+            list-style-type: square;
+        }
+
+        .napomena {
+            color: red;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        /* STILOVI ZA TABLICU RASPOREDA */
+        .raspored {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        .raspored caption {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .raspored th,
+        .raspored td {
+            border: 1px solid #cccccc;
+            padding: 6px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .raspored th {
+            background-color: #fff7cc;
+        }
+
+    </style>
+-->
+</head>
+<body>
+
+<div class="page">
+
+    <header>
+        <div class="banner">
+            <img src="img/lego_banner.jpg" alt="Lego">
+        </div>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Početna</a></li>
+                <li><a href="#">O nama</a></li>
+                <li><a href="#">Radionice</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+                <li><a href="gallery.html">Galerija</a></li>
+                <li><a href="https://www.lego.com" target="_blank">LEGO službena stranica</a></li>
+            </ul>
+        </nav>
+    </header>
+        
+    <main>
+        <section class="lego-gallery">
+            <h2>Galerija LEGO setova</h2>
+            <p>Ovdje možete vidjeti nekoliko LEGO setova iz naše kolekcije.</p>
+        
+            <div class="gallery-row">
+                <img src="img/lego_city_1.jpg" alt="LEGO City policijska postaja" data-set="city">
+                <img src="img/lego_technic_1.jpg" alt="LEGO Technic trkaći auto" data-set="technic">
+                <img src="img/lego_friends_1.jpg" alt="LEGO Friends kafić" data-set="friends">
+            </div>
+        
+            <div class="gallery-row">
+                <img src="img/lego_city_2.jpg" alt="LEGO City vatrogasci" data-set="city">
+                <img src="img/lego_technic_2.jpg" alt="LEGO Technic helikopter" data-set="technic">
+                <img src="img/lego_friends_2.jpg" alt="LEGO Friends kuća" data-set="friends">
+            </div>
+        </section>
+    </main>
+        
+    <footer>
+        © Vaše ime i prezime
+    </footer>
+    </div>
+</body>
+</html>
